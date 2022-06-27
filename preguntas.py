@@ -168,7 +168,7 @@ def pregunta_04():
 
     cfm_test = confusion_matrix(
         y_true=y_test,
-        y_pred=pipeline.predict(y_test),
+        y_pred=pipeline.predict(X_test),
     )
 
     # Retorne la matriz de confusion de entrenamiento y prueba
