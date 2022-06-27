@@ -74,7 +74,7 @@ def pregunta_01():
     y = df['type']
 
     # Asigne una copia del dataframe `df` a la variable `X`.
-    X = df.copy(deep=True)
+    X = df.copy()
 
     # Remueva la columna `type` del DataFrame `X`.
     X.drop(columns=['type'], inplace=True)
@@ -134,7 +134,7 @@ def pregunta_03():
     # LogisticRegression con una regularización Cs=10
     pipeline = Pipeline(
         steps=[
-            ("onehot", OneHotEncoder()),
+            ("OneHotEncoder", OneHotEncoder()),
             ("LogisticRegression", LogisticRegressionCV(Cs=10)),
         ],
     )
